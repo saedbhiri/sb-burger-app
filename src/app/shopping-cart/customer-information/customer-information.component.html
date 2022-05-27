@@ -12,21 +12,21 @@
         <div class="col-md-5">
           <label for="firstName" class="form-label">First name</label>
           <input type="text" class="form-control" id="firstName" formControlName="firstName">
-          <span *ngIf="customerInfoForm.controls['firstName'].untouched" style="color:red">*required field</span>
+          <span *ngIf="customerInfoForm.controls['firstName'].invalid && customerInfoForm.controls['firstName'].untouched" style="color:red">*required field</span>
           <span *ngIf="customerInfoForm.controls['firstName'].invalid && customerInfoForm.controls['firstName'].touched"
             style="color:red">*Please enter First name!</span>
         </div>
         <div class="col-md-5">
           <label for="lastName" class="form-label">Last name</label>
           <input type="text" class="form-control" id="lastName" formControlName="lastName">
-          <span *ngIf="customerInfoForm.controls['lastName'].untouched" style="color:red">*required field</span>
+          <span *ngIf="customerInfoForm.controls['lastName'].invalid && customerInfoForm.controls['lastName'].untouched" style="color:red">*required field</span>
           <span *ngIf="customerInfoForm.controls['lastName'].invalid && customerInfoForm.controls['lastName'].touched"
             style="color:red">*Please enter Last name!</span>
         </div>
         <div class="col-md-5">
           <label for="phoneNumber" class="form-label">Phone number</label>
           <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber">
-          <span *ngIf="customerInfoForm.controls['phoneNumber'].untouched" style="color:red">*required field</span>
+          <span *ngIf="customerInfoForm.controls['phoneNumber'].invalid && customerInfoForm.controls['phoneNumber'].untouched" style="color:red">*required field</span>
           <span
             *ngIf="customerInfoForm.controls['phoneNumber'].invalid && customerInfoForm.controls['phoneNumber'].touched"
             style="color:red">*Please enter valid Phone number!</span>
@@ -34,21 +34,21 @@
         <div class="col-md-5">
           <label for="email" class="form-label">Email</label>
           <input type="text" class="form-control" id="email" formControlName="email">
-          <span *ngIf="customerInfoForm.controls['email'].untouched" style="color:red">*required field</span>
+          <span *ngIf="customerInfoForm.controls['email'].invalid && customerInfoForm.controls['email'].untouched" style="color:red">*required field</span>
           <span *ngIf="customerInfoForm.controls['email'].invalid && customerInfoForm.controls['email'].touched"
             style="color:red">*Please enter valid Email!</span>
         </div>
         <div class="col-md-5">
           <label for="city" class="form-label">City</label>
           <input type="text" class="form-control" id="city" formControlName="city">
-          <span *ngIf="customerInfoForm.controls['city'].untouched" style="color:red">*required field</span>
+          <span *ngIf="customerInfoForm.controls['city'].invalid && customerInfoForm.controls['city'].untouched" style="color:red">*required field</span>
           <span *ngIf="customerInfoForm.controls['city'].invalid && customerInfoForm.controls['city'].touched"
             style="color:red">*Please enter City!</span>
         </div>
         <div class="col-md-5">
           <label for="streetNumber" class="form-label">Street number</label>
           <input type="text" class="form-control" id="streetNumber" formControlName="streetNumber">
-          <span *ngIf="customerInfoForm.controls['lastName'].untouched" style="color:red">*required field</span>
+          <span *ngIf="customerInfoForm.controls['streetNumber'].invalid && customerInfoForm.controls['lastName'].untouched" style="color:red">*required field</span>
           <span
             *ngIf="customerInfoForm.controls['streetNumber'].invalid && customerInfoForm.controls['streetNumber'].touched"
             style="color:red">*Please enter Streer number!</span>
@@ -56,7 +56,7 @@
         <div class="col-md-5">
           <label for="houseNumber" class="form-label">House number</label>
           <input type="text" class="form-control" id="houseNumber" formControlName="houseNumber">
-          <span *ngIf="customerInfoForm.controls['houseNumber'].untouched" style="color:red">*required field</span>
+          <span *ngIf="customerInfoForm.controls['houseNumber'].invalid && customerInfoForm.controls['houseNumber'].untouched" style="color:red">*required field</span>
           <span
             *ngIf="customerInfoForm.controls['houseNumber'].invalid && customerInfoForm.controls['houseNumber'].touched"
             style="color:red">*Please enter House number!</span>
@@ -64,7 +64,7 @@
         <div class="col-md-5">
           <label for="zip" class="form-label">Zip</label>
           <input type="text" class="form-control" id="zip" formControlName="zip">
-          <span *ngIf="customerInfoForm.controls['zip'].untouched" style="color:red">*required field</span>
+          <span *ngIf="customerInfoForm.controls['zip'].invalid && customerInfoForm.controls['zip'].untouched" style="color:red">*required field</span>
           <span *ngIf="customerInfoForm.controls['zip'].invalid && customerInfoForm.controls['zip'].touched"
             style="color:red">*Please enter valid Zip number!</span>
         </div>
