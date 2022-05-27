@@ -23,8 +23,36 @@ export class ShoppingCartService {
   }
 
   addToShoppingCart(item: Menu) {
-    this.shoppingCart.push(item);
+    //this.shoppingCart.push(item);
+    const index = this.shoppingCart.findIndex(element => {
+      if (element.category === item.category && element.name === item.name && element.note === item.note) {
+        if (this.objectAreSame(element.ingredients, item.ingredients) && this.objectAreSame(element.sauces, item.sauces)
+         && this.objectAreSame(element.sideDishes, item.sideDishes) && this.objectAreSame(element.weight, item.weight))
+          return true;
+        else return false;
+      }
+      else
+        return false;
+    });
+    if (index != -1) {
+      this.shoppingCart[index].amount += item.amount;
+    }
+    else
+      this.shoppingCart.push(item);
     this.shoppingCartChanged.next(this.shoppingCart.slice());
+  }
+
+  objectAreSame(x, y) {
+    var objectAreSame = true;
+    for (var i = 0; i < x.length; i++) {
+      for (var propertyName in x[i]) {
+        if (x[i][propertyName] != y[i][propertyName]) {
+          objectAreSame = false;
+          break;
+        }
+      }
+    }
+    return objectAreSame;
   }
 
   deleteFromShoppingCart(index: number) {
