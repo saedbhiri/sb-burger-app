@@ -68,7 +68,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -159,7 +159,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -250,7 +250,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -341,7 +341,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -365,7 +365,7 @@
   },
   {
     "category": "beef",
-    "name": "skb",
+    "name": "sb",
     "image": "https://media-cdn.tripadvisor.com/media/photo-s/12/b7/b8/ab/mexicano.jpg",
     "price": 43,
     "description": "burger of 250g , 2 pecies of classic meat",
@@ -432,7 +432,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -456,7 +456,7 @@
   },
   {
     "category": "beef",
-    "name": "skb filled",
+    "name": "sb filled",
     "image": "https://charlotteslivelykitchen.com/wp-content/uploads/2016/07/Homemade-Stuffed-Cheese-Burgers-11.jpg",
     "price": 56,
     "description": "burger of 250g classic meat filled with cheder cheese",
@@ -523,7 +523,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -547,7 +547,7 @@
   },
   {
     "category": "beef",
-    "name": "grand skb",
+    "name": "grand sb",
     "image": "https://blackbarburger.co.il/wp-content/uploads/2019/11/burgers_0012_seattle-min.jpg",
     "price": 56,
     "description": "burger of 250g with addition of special pecies of meat",
@@ -614,7 +614,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -705,7 +705,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -796,7 +796,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -880,7 +880,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -971,7 +971,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -1062,7 +1062,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -1153,7 +1153,7 @@
         "sauceValue": false
       },
       {
-        "sauceName": "skb",
+        "sauceName": "sb",
         "sauceValue": true
       },
       {
@@ -1185,7 +1185,7 @@
   },
   {
     "category": "side-dishes",
-    "name": "skb mix",
+    "name": "sb mix",
     "image": "https://blackcherry.co.il/wp-content/uploads/2019/07/106-1.jpg",
     "price": 45,
     "amount": 1,

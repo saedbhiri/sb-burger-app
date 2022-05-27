@@ -3,14 +3,14 @@ import { Branch } from './../../shared/branch.model';
 import { CustomerInfo } from './../../shared/customerInfo.model';
 import { Menu } from './../../shared/menu.model';
 import { ShoppingCartService } from './../shopping-cart.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-order-summary',
   templateUrl: './order-summary.component.html',
   styleUrls: ['./order-summary.component.css']
 })
-export class OrderSummaryComponent implements OnInit {
+export class OrderSummaryComponent implements OnInit, OnDestroy {
 
   shoppingCart: Menu[];
   cartSubtotal: number;
@@ -34,6 +34,7 @@ export class OrderSummaryComponent implements OnInit {
     this.customerInfo = this.shoppingCartService.getCustomerInfo();
     this.branch = this.shoppingCartService.getBranch();
     this.receivingOrderWay = this.shoppingCartService.getReceivingOrderWay();
+    this.shoppingCartService.deleteShoppingCart();
   }
 
   calculateItemPrice(item: Menu) {
@@ -52,8 +53,11 @@ export class OrderSummaryComponent implements OnInit {
   }
 
   onBackToHome(): void {
-    this.shoppingCartService.deleteShoppingCart();
     this.shoppingCartService.resetData();
     this.router.navigate(['/main'], { relativeTo: this.route })
+  }
+
+  ngOnDestroy(): void {
+    this.shoppingCartService.resetData();
   }
 }

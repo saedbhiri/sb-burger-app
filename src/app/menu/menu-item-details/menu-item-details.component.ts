@@ -37,7 +37,7 @@ export class MenuItemDetailsComponent implements OnInit, OnDestroy {
         }
         else {
           this.id = params['id'];
-          this.menuItem = this.shoppingCartService.getShoppingCartByIndex(this.id);
+          this.menuItem = this.menuService.getItemFromShoppingCartByIndex(this.id);
         }
       }
     );
@@ -56,7 +56,7 @@ export class MenuItemDetailsComponent implements OnInit, OnDestroy {
     this.shoppingCartItem = Object.assign({}, this.menuItem, this.itemDetailsForm.value);
 
     if (this.editMode) {
-      this.shoppingCartService.updateShoppingCart(this.id, this.shoppingCartItem);
+      this.menuService.updateShoppingCart(this.id, this.shoppingCartItem);
       this.itemDetailsForm.reset();
       this.router.navigate(['/shopping-cart'], { relativeTo: this.route });
     }

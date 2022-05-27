@@ -51,4 +51,12 @@ export class MenuService {
   addItemToShoppingCart(item:Menu){
     this.shoppingCartService.addToShoppingCart(item);
   }
+
+  getItemFromShoppingCartByIndex(index:number){
+    return this.shoppingCartService.getShoppingCartByIndex(index);
+  }
+
+  updateShoppingCart(index:number,newItem:Menu){
+    this.shoppingCartService.updateShoppingCart(index,newItem);
+  }
 }

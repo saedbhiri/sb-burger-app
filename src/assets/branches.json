@@ -3,18 +3,18 @@
     "city": "Tel-Aviv",
     "phoneNumber": "09-9399391",
     "address": "Lincoln 15",
-    "startTime": "12:00",
+    "startTime": "07:00",
     "endTime": "23:59"
   },
   {
     "city": "Herzilya",
     "phoneNumber": "09-9399392",
-    "address": "Aba helel 3",
+    "address": "Aba Helel 3",
     "startTime": "12:30",
     "endTime": "23:59"
   },
   {
-    "city": "Kfar-saba",
+    "city": "Kfar-Saba",
     "phoneNumber": "03-9399393",
     "address": "Waitsman 10",
     "startTime": "12:30",
