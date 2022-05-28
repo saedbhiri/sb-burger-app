@@ -3,9 +3,23 @@
     <label for="weight" class="col-sm-3 col-form-label">weight / pecies + {{ weightItem.price |currency:'ILS'}}
     </label>
     <div class="col-sm-4">
-      <input type="number" class="form-control" id="weight" [min]="weightItem.grams" [max]="weightItem.grams*6" name="weight"
-        [value]="weightItem.grams * weightItem.quantity" formArrayName="weight"
-        (change)="onWeightChanged($event)">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn" (click)="onMinusClick(weightItem)"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/>
+          </svg></button>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" id="weight" [min]="weightItem.grams" [max]="weightItem.grams*6" name="weight"
+          [value]="weightItem.grams * weightItem.quantity" formArrayName="weight"
+          (change)="onWeightChanged($event)">
+        </div>
+        <div class="col">
+          <button type="button" class="btn" (click)="onPlusClick(weightItem)"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </svg></button>
+        </div>
+      </div>
     </div>
   </div>
 </form>

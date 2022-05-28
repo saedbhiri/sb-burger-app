@@ -1,5 +1,5 @@
 import { FormGroup } from '@angular/forms';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-item-amount',
@@ -10,10 +10,22 @@ export class ItemAmountComponent implements OnInit {
 
   @Input() amount: number;
   @Input() form: FormGroup;
+  @Output() amountChanged = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onMinusClick() {
+    if (this.amount > 1)
+      this.amount--;
+    this.amountChanged.next(this.amount);
+  }
+
+  onPlusClick() {
+    this.amount++;
+    this.amountChanged.next(this.amount);
   }
 
 }

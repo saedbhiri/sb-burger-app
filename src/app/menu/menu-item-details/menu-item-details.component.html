@@ -7,7 +7,7 @@
         <app-item-header [imgUrl]="menuItem.image" [name]="menuItem.name" [description]="menuItem.description"
           [category]="menuItem.category">
         </app-item-header>
-        <app-item-amount [form]="itemDetailsForm" [amount]="menuItem.amount">
+        <app-item-amount [form]="itemDetailsForm" [amount]="menuItem.amount" (amountChanged)="omAmountChanged($event)">
         </app-item-amount>
         <app-item-weight [form]="itemDetailsForm" [weight]="menuItem.weight"></app-item-weight>
         <app-item-side-dish [form]="itemDetailsForm" [sideDishes]="menuItem.sideDishes"></app-item-side-dish>

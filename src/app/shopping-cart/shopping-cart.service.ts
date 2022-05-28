@@ -23,23 +23,26 @@ export class ShoppingCartService {
   }
 
   addToShoppingCart(item: Menu) {
-    //this.shoppingCart.push(item);
-    const index = this.shoppingCart.findIndex(element => {
-      if (element.category === item.category && element.name === item.name && element.note === item.note) {
-        if (this.objectAreSame(element.ingredients, item.ingredients) && this.objectAreSame(element.sauces, item.sauces)
-         && this.objectAreSame(element.sideDishes, item.sideDishes) && this.objectAreSame(element.weight, item.weight))
-          return true;
-        else return false;
-      }
-      else
-        return false;
-    });
+    const index = this.checkIfExist(this.shoppingCart, item);
     if (index != -1) {
       this.shoppingCart[index].amount += item.amount;
     }
     else
       this.shoppingCart.push(item);
     this.shoppingCartChanged.next(this.shoppingCart.slice());
+  }
+
+  checkIfExist(shoppingCart: Menu[], item: Menu) {
+    return this.shoppingCart.findIndex(element => {
+      if (element.category === item.category && element.name === item.name && element.note === item.note) {
+        if (this.objectAreSame(element.ingredients, item.ingredients) && this.objectAreSame(element.sauces, item.sauces)
+          && this.objectAreSame(element.sideDishes, item.sideDishes) && this.objectAreSame(element.weight, item.weight))
+          return true;
+        else return false;
+      }
+      else
+        return false;
+    });
   }
 
   objectAreSame(x, y) {
@@ -66,7 +69,17 @@ export class ShoppingCartService {
   }
 
   updateShoppingCart(index: number, newItem: Menu) {
-    this.shoppingCart[index] = newItem;
+    const ind = this.checkIfExist(this.shoppingCart, newItem);
+    if (ind != -1) {
+      if (index != ind) {
+        this.shoppingCart[ind].amount += newItem.amount;
+        this.shoppingCart.splice(index, 1);
+      }
+      else
+        this.shoppingCart[index] = newItem;
+    }
+    else
+      this.shoppingCart[index] = newItem;
     this.shoppingCartChanged.next(this.shoppingCart.slice());
   }
 

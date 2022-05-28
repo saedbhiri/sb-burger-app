@@ -29,4 +29,13 @@ export class ItemWeightComponent implements OnInit {
       ctrl.value.quantity += event.target.value - (ctrl.value.quantity * ctrl.value.grams);
     })
   }
+
+  onMinusClick(weightItem: Weight) {
+    if (weightItem.quantity > 1)
+      weightItem.quantity--;
+  }
+
+  onPlusClick(weightItem: Weight) {
+    weightItem.quantity++;
+  }
 }
